@@ -1,3 +1,13 @@
+## How to use:
+
+Running the container as default configures a local SQLite database:
+`docker run -d -p 80:5000 chris24walsh/flask-aws:latest`
+
+If you want to use a remote MYSQL database, pass these command arguments at runtime:
+`(...-aws:latest) /bin/sh set_db_URI.sh /
+"mysql+pymysql://<db_username<db_password>@<db_endpoint>:3306/<db_name>'"`
+
+
 ## How to set up a load balanced and redundant Flask WebApp on ECS with Docker 
 
 ### 1 Configure the ECS cluster
@@ -52,7 +62,7 @@ For now, keep the auto scaling group at its initial size, ignore notifications a
 
 
 
-
+#### (Forked README)
 
 ### Deploying a Flask application in AWS: An end-to-end tutorial
 
